@@ -10,7 +10,7 @@ I built this trying to determine the most frequent IP addresses hitting the logi
 You can just clone this repo and use the included script as-is with `php ip_visitor_count.php` or for easier access you can do:
 
 * `chmod +x ip_visitor_count.php`
-* `sudo mv ip_visitor_count.php /usr/local/bin/ipvc`
+* `sudo cp ip_visitor_count.php /usr/local/bin/ipvc`
 
 The script can now be accessed with just the `ipvc` command. :tada:
 

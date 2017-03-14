@@ -19,6 +19,7 @@ $filename = $argv[1];
 $filepath = getcwd() . '/' . $filename;
 $search = $argv[2];
 $visits = array();
+$visits_total = 0;
 
 $handle = fopen( $filepath, "r" );
 if ($handle) {
@@ -30,6 +31,8 @@ if ($handle) {
             } else {
                 $visits[$ip] = 1;
             }
+
+            $visits_total++;
         }
     }
 
@@ -39,6 +42,6 @@ if ($handle) {
 }
 
 arsort($visits);
-echo print_r($visits, true);
+echo print_r($visits, true) . "\r\n" . 'Total: ' . $visits_total . PHP_EOL;
 
 ?>
